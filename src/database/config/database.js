@@ -1,4 +1,3 @@
-
 import Sequelize from 'sequelize';
 import config from './config.js';
 
@@ -17,7 +16,9 @@ switch (process.env.NODE_ENV) {
     sequelizeConfig = production;
     break;
   default:
-    throw new Error('Invalid NODE_ENV value. Supported values are development, test, and production.');
+    throw new Error(
+      'Invalid NODE_ENV value. Supported values are development, test, and production.',
+    );
 }
 
 const sequelize = new Sequelize(sequelizeConfig.url, sequelizeConfig);
