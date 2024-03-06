@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run eslint"
+      "pre-commit": "npm run format && npm run test"
     }
   },
   "keywords": [],
