@@ -10,7 +10,7 @@
     "migration": "npx sequelize-cli db:migrate",
     "down": "npx sequelize-cli db:migrate:undo",
     "build": "babel ./src/index.js -d build",
-    "lint": "eslint . --fix",
+    "eslint": "eslint . --fix",
     "format": "prettier --write .",
     "test": "mocha --require @babel/register --timeout 60000 --exit ./src/tests/**/*.js"
   },
