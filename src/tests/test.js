@@ -1,6 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import chaiHttp from 'chai-http';
 import chai from 'chai';
-import app from '../app.js';
 
 chai.use(chaiHttp);
 const { expect } = chai;
