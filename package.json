@@ -13,8 +13,11 @@
     "eslint": "eslint . --fix",
     "format": "prettier --write .",
     "test": "mocha --require @babel/register --timeout 60000 --exit ./src/tests/**/*.js",
-    "precommit": "npm run eslint && npm test"
+    "precommit": "echo Running pre-commit hook && npm run eslint && npm test && echo Pre-commit hook finished successfully"
   },
+    "pre-commit": [
+    "precommit"
+  ],
 
   "husky": {
     "hooks": {
