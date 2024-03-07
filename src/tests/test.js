@@ -9,7 +9,7 @@ describe('Testing', () => {
   describe('Math', () => {
     it('should add two numbers', () => {
       const result = 2 + 3;
-      expect(result).to.equal(5);
+      expect(result).to.equal(3);
     });
   });
 });
