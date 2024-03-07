@@ -12,19 +12,14 @@
     "build": "babel ./src/index.js -d build",
     "eslint": "eslint . --fix",
     "format": "prettier --write .",
-    "test": "mocha --require @babel/register --timeout 60000 --exit ./src/tests/**/*.js"
+    "test": "mocha --require @babel/register --timeout 60000 --exit ./src/tests/**/*.js",
+    "precommit": "npm run eslint && npm test"
   },
+
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run precommit"
     }
-  },
-  "lint-staged": {
-    "*.{js,json}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ]
   },
   "keywords": [],
   "author": "",
