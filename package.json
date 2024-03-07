@@ -12,16 +12,11 @@
     "build": "babel ./src/index.js -d build",
     "eslint": "eslint . --fix",
     "format": "prettier --write .",
-    "test": "mocha --require @babel/register --timeout 60000 --exit ./src/tests/**/*.js",
-    "precommit": "echo Running pre-commit hook && npm run eslint && npm test && echo Pre-commit hook finished successfully"
+    "test": "mocha --require @babel/register --timeout 60000 --exit ./src/tests/**/*.js"
   },
-    "pre-commit": [
-    "precommit"
-  ],
-
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit"
+      "pre-commit": ".husky/pre-commit"
     }
   },
   "keywords": [],
